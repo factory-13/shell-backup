@@ -11,7 +11,7 @@
 # Timestamp generator.
 # -------------------------------------------------------------------------------------------------------------------- #
 
-function ext.timestamp() {
+ext.timestamp() {
     timestamp="$( date -u '+%Y-%m-%d.%T' )"
 
     echo ${timestamp}

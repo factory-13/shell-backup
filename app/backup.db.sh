@@ -11,7 +11,7 @@
 # Timestamp generator.
 # -------------------------------------------------------------------------------------------------------------------- #
 
-function ext.timestamp() {
+ext.timestamp() {
     timestamp="$( date -u '+%Y-%m-%d.%T' )"
 
     echo ${timestamp}
@@ -21,7 +21,7 @@ function ext.timestamp() {
 # Backup databases.
 # -------------------------------------------------------------------------------------------------------------------- #
 
-function ext.backup.db() {
+ext.backup.db() {
     # DB user.
     db_user=""
 
@@ -35,7 +35,7 @@ function ext.backup.db() {
     timestamp="$( ext.timestamp )"
 
     # Path.
-    path="/storage/databases/.backup/${timestamp}"
+    path="/home/storage/databases/.backup/${timestamp}"
 
     # Mail.
     mail_to=""
