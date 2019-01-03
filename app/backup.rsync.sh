@@ -12,14 +12,25 @@
 # -------------------------------------------------------------------------------------------------------------------- #
 
 function ext.backup.rsync() {
+    # SSH user.
     ssh_user=""
+
+    # SSH password.
     ssh_pass=""
+
+    # SSH host.
     ssh_host=""
+
+    # SSH port.
     ssh_port=""
 
+    # Local directory.
     dir_local=""
+
+    # Remote directory.
     dit_remote=""
 
+    # Get sshpass.
     sshpass="$( which sshpass )"
 
     ${sshpass} -p "${ssh_pass}" rsync -avze "ssh -p ${ssh_port}" ${ssh_user}@${ssh_host}:${dit_remote} ${dir_local}
